@@ -28,27 +28,48 @@ export async function GET() {
 
     const userGuilds = await userResponse.json();
     
-    // Try to fetch bot's guilds - first from stats endpoint, then from Discord API
+    // Fetch bot's guilds using Discord bot token
     let botGuildIds: string[] = [];
     
-    // First try: stats endpoint (if bot is online)
-    try {
-      const statsUrl = process.env.NEXTAUTH_URL ? `${process.env.NEXTAUTH_URL}/api/stats` : "http://localhost:5000/api/stats";
-      const statsResponse = await fetch(statsUrl, { signal: AbortSignal.timeout(5000) });
-      
-      if (statsResponse.ok) {
-        const stats = await statsResponse.json();
-        botGuildIds = stats.guild_ids || [];
+    if (process.env.DISCORD_BOT_TOKEN) {
+      try {
+        const botGuildsResponse = await fetch("https://discord.com/api/users/@me/guilds", {
+          headers: {
+            Authorization: `Bot ${process.env.DISCORD_BOT_TOKEN}`,
+          },
+        });
+        
+        if (botGuildsResponse.ok) {
+          const botGuilds = await botGuildsResponse.json();
+          botGuildIds = botGuilds.map((g: any) => g.id);
+          console.log(`Bot is in ${botGuildIds.length} servers`);
+        }
+      } catch (error) {
+        console.warn("Failed to fetch bot guilds:", error);
       }
-    } catch (statsError) {
-      console.warn("Bot stats endpoint unavailable");
+    }
+    
+    // If bot token not available, try stats endpoint
+    if (botGuildIds.length === 0) {
+      try {
+        const statsUrl = process.env.NEXTAUTH_URL ? `${process.env.NEXTAUTH_URL}/api/stats` : "http://localhost:5000/api/stats";
+        const statsResponse = await fetch(statsUrl, { signal: AbortSignal.timeout(5000) });
+        
+        if (statsResponse.ok) {
+          const stats = await statsResponse.json();
+          botGuildIds = stats.guild_ids || [];
+        }
+      } catch (statsError) {
+        console.warn("Stats endpoint unavailable");
+      }
     }
     
     // Filter for mutual servers (where both user and bot are members)
     const mutualGuilds = botGuildIds.length > 0 
       ? userGuilds.filter((guild: any) => botGuildIds.includes(guild.id))
-      : userGuilds;
+      : [];
     
+    console.log(`User has ${userGuilds.length} servers, bot has ${botGuildIds.length}, mutual: ${mutualGuilds.length}`);
     return NextResponse.json(mutualGuilds);
   } catch (error) {
     console.error("Guilds endpoint error:", error);
