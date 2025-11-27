@@ -3,31 +3,40 @@ import type { Metadata } from "next"
 import { Providers } from "./providers"
 import "./globals.css"
 import DynamicFavicon from "./components/DynamicFavicon"
+import { getMetadataConfig } from "@/lib/metadata-config"
 
-// Metadata dynamically loads botName and tagline from siteconfig.json
-// Static metadata for SSR - will be enhanced on client side
+const config = getMetadataConfig()
+
 export const metadata: Metadata = {
-  title: "Eris Bot - Discord Bot",
-  description:
-    "A comprehensive Discord bot for server management, moderation, and engagement with 400+ commands across 30+ categories",
+  title: `${config.botName} - Discord Bot`,
+  description: config.description,
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/eris-logo.png", type: "image/png", sizes: "512x512" },
+      { url: config.favicon, type: "image/png" },
+      { url: config.botLogo, type: "image/png", sizes: "512x512" },
     ],
-    apple: "/eris-logo.png",
+    apple: config.botLogo,
   },
   openGraph: {
-    title: "Eris Bot - Discord Bot",
-    description: "A comprehensive Discord bot for server management, moderation, and engagement",
+    title: `${config.botName} - Discord Bot`,
+    description: config.description,
     type: "website",
-    images: ["/eris-logo.png"],
+    url: config.discordServerInvite,
+    images: [
+      {
+        url: config.image,
+        width: 1200,
+        height: 630,
+        alt: config.botName,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eris Bot - Discord Bot",
-    description: "A comprehensive Discord bot for server management, moderation, and engagement",
-    images: ["/eris-logo.png"],
+    title: `${config.botName} - Discord Bot`,
+    description: config.description,
+    images: [config.image],
+    creator: "@discord",
   },
   generator: 'v0.app'
 }
