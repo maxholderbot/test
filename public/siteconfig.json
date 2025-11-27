@@ -1,9 +1,9 @@
 {
-  "botName": "Serenity",
-  "botLogo": "https://cdn.discordapp.com/avatars/YOUR_BOT_ID/YOUR_AVATAR_HASH.png",
-  "favicon": "test",
-  "tagline": "Your advanced Discord bot for server management",
-  "inviteLink": "https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID",
-  "clientSecret": "YOUR_CLIENT_SECRET_HERE",
-  "discordServerInvite": "https://discord.gg/YOUR_SERVER_INVITE"
+  "botName": "relapse",
+  "botLogo": "https://files.catbox.moe/8yrqqi.png",
+  "favicon": "https://files.catbox.moe/8yrqqi.png",
+  "tagline": "all-in-one discord app that does it all.",
+  "inviteLink": "https://discord.com/oauth2/authorize?client_id=1443346152870252744",
+  "clientSecret": "xyfTzlgp8N44lOO1a6BfRZKXveYP-sv1",
+  "discordServerInvite": "https://discord.gg/5awnBUAG"
 }
