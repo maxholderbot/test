@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 
-export const runtime = 'edge';
-
 let cachedStats = {
   servers: 0,
   users: 0,
