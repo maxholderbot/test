@@ -196,6 +196,29 @@ export default function Home() {
                 )}
               </motion.div>
             )}
+
+            {/* Footer Links */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="mt-16 flex gap-4 justify-center"
+            >
+              <Link
+                href="/tos"
+                className="flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-medium transition-all border border-[#CECECE]/20 hover:border-[#CECECE]/50 bg-[#1B1B1B]/50 hover:bg-[#1B1B1B]/80 text-[#CECECE]"
+              >
+                <Icons.FileText className="w-4 h-4" />
+                Terms of Service
+              </Link>
+              <Link
+                href="/privacy"
+                className="flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-medium transition-all border border-[#CECECE]/20 hover:border-[#CECECE]/50 bg-[#1B1B1B]/50 hover:bg-[#1B1B1B]/80 text-[#CECECE]"
+              >
+                <Icons.ShieldAlert className="w-4 h-4" />
+                Privacy Policy
+              </Link>
+            </motion.div>
           </motion.div>
         </main>
       </div>
