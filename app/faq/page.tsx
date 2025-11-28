@@ -19,7 +19,7 @@ export default function FAQPage() {
   const faqs: FAQItem[] = [
     {
       question: "How many commands does the bot have?",
-      answer: "The bot has 611 commands across 30+ feature categories including moderation, leveling, giveaways, automation, and entertainment - all available as both slash commands and prefix commands for full flexibility",
+      answer: "The bot has 400+ commands across 30+ feature categories including moderation, leveling, giveaways, automation, and entertainment - all available as both slash commands and prefix commands for full flexibility",
     },
     {
       question: "What are the main features?",
