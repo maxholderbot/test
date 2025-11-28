@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: config.image,
-        width: 1200,
-        height: 630,
+        width: 256,
+        height: 256,
         alt: config.botName,
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: `${config.botName} - Discord Bot`,
     description: config.description,
     images: [config.image],
