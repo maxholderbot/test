@@ -3155,18 +3155,18 @@ export const ALL_COMMANDS: Record<string, Command> = {
     "has_slash": false,
     "is_group": false
   },
-  "roles_roles_add": {
-    "name": "roles add",
-    "description": "Add role to user",
+  "roles_role": {
+    "name": "role",
+    "description": "Assign or remove roles from members with flexible role detection",
     "aliases": [],
     "category": "roles",
-    "permissions": [],
-    "required_args": [],
+    "permissions": ["manage_roles"],
+    "required_args": [{"name": "member", "type": "user"}, {"name": "roles", "type": "text"}],
     "optional_args": [],
-    "examples": [],
+    "examples": [",role @user Admin", ",role @user \"Image perms\"", ",role @user Admin, Moderator, VIP"],
     "subcommands": [],
     "has_prefix": true,
-    "has_slash": false,
+    "has_slash": true,
     "is_group": false
   },
   
