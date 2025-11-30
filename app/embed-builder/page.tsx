@@ -194,7 +194,7 @@ export default function EmbedBuilder() {
         const buttonParts: string[] = [];
         if (button.label) buttonParts.push(`label=${button.label.replace(/\n/g, '\\n')}`);
         if (button.style) buttonParts.push(`style=${button.style}`);
-        if (button.url) buttonParts.push(`url=${button.url}`);
+        if (button.style === 'link' && button.url) buttonParts.push(`url=${button.url}`);
         if (button.emoji) buttonParts.push(`emoji=${button.emoji}`);
         if (button.row !== undefined) buttonParts.push(`row=${button.row}`);
         if (button.disabled) buttonParts.push(`disabled=${button.disabled}`);
@@ -473,7 +473,7 @@ export default function EmbedBuilder() {
 
                               {/* Fields */}
                               {embedData.fields && embedData.fields.length > 0 && (
-                                <div className={`mt-2 grid gap-2 ${embedData.fields.some(f => f.inline) ? 'grid-cols-3' : 'grid-cols-1'}`}>
+                                <div className={`mt-2 grid gap-2 ${embedData.fields.some(f => f.inline) ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-1'}`}>
                                   {embedData.fields.map((field, index) => (
                                     <div key={index} className={field.inline ? 'col-span-1' : 'col-span-3'}>
                                       <div 
