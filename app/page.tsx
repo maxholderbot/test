@@ -126,10 +126,10 @@ export default function Home() {
                   >
                     <Link
                       href={link.href}
-                      className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all bg-[#1B1B1B]/80 border border-[#CECECE]/20 hover:border-[#CECECE]/50 hover:bg-[#1B1B1B] text-[#FAFAFA] soft-bevel rim-light"
+                      className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all bg-[#1B1B1B]/80 border border-[#CECECE]/20 hover:border-[#CECECE]/50 hover:bg-[#1B1B1B] text-[#FAFAFA] soft-bevel rim-light text-sm"
                     >
                       <Icon className="w-4 h-4" />
-                      <span className="hidden sm:inline">{link.label}</span>
+                      <span>{link.label}</span>
                     </Link>
                   </motion.div>
                 )
@@ -205,7 +205,7 @@ export default function Home() {
               className="mt-16 flex gap-4 justify-center"
             >
               <Link
-                href="/tos"
+                href="/tos
                 className="flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-medium transition-all border border-[#CECECE]/20 hover:border-[#CECECE]/50 bg-[#1B1B1B]/50 hover:bg-[#1B1B1B]/80 text-[#CECECE]"
               >
                 <Icons.FileText className="w-4 h-4" />
