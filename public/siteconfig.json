@@ -1,11 +1,11 @@
 {
-  "botName": "iga moderation",
-  "botLogo": "https://files.catbox.moe/ll9pg7.jpg",
-  "favicon": "https://files.catbox.moe/ll9pg7.jpg",
-  "tagline": "iga moderation",
-  "description": "iga 6.9",
-  "image": "https://files.catbox.moe/ll9pg7.jpg",
-  "inviteLink": "https://discord.com/oauth2/authorize?client_id=1443346152870252744",
+  "botName": "Maxy",
+  "botLogo": "https://media.discordapp.net/attachments/1427559357003989082/1446458484462981201/38086965eba3b45250b9294cc0af8053.png?ex=69340ef0&is=6932bd70&hm=8627c64c1923888fd0b88303e2d8f79623f769a352c80e8140d712939f4509ad&=&format=webp&quality=lossless&width=783&height=783",
+  "favicon": "https://media.discordapp.net/attachments/1427559357003989082/1446458484462981201/38086965eba3b45250b9294cc0af8053.png?ex=69340ef0&is=6932bd70&hm=8627c64c1923888fd0b88303e2d8f79623f769a352c80e8140d712939f4509ad&=&format=webp&quality=lossless&width=783&height=783",
+  "tagline": "Maxy",
+  "description": "Maxy discord bot.",
+  "image": "https://media.discordapp.net/attachments/1427559357003989082/1446458484462981201/38086965eba3b45250b9294cc0af8053.png?ex=69340ef0&is=6932bd70&hm=8627c64c1923888fd0b88303e2d8f79623f769a352c80e8140d712939f4509ad&=&format=webp&quality=lossless&width=783&height=783",
+  "inviteLink": "https://discord.com/oauth2/authorize?client_id=1408075564853493811",
   "clientSecret": "xyfTzlgp8N44lOO1a6BfRZKXveYP-sv1",
-  "discordServerInvite": "https://discord.gg/5awnBUAG"
+  "discordServerInvite": "https://discord.gg/QPSCabJHZC"
 }
