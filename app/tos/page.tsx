@@ -28,7 +28,7 @@ export default function TOSPage() {
             <section>
               <h2 className="text-2xl font-bold mb-3">1. ACCEPTANCE OF TERMS</h2>
               <p className={isDark ? "text-gray-300" : "text-gray-700"}>
-                By inviting or using the Eris Discord bot ("the Bot"), you agree to these Terms of Service. If you do
+                By inviting or using the Mayx Discord bot ("the Bot"), you agree to these Terms of Service. If you do
                 not agree, please remove the Bot from your server.
               </p>
             </section>
@@ -36,7 +36,7 @@ export default function TOSPage() {
             <section>
               <h2 className="text-2xl font-bold mb-3">2. DESCRIPTION OF SERVICE</h2>
               <p className={isDark ? "text-gray-300" : "text-gray-700"}>
-                Eris is a Discord bot providing moderation, utility, fun, and automation features for Discord servers.
+                Maxy is a Discord bot providing moderation, utility, fun, and automation features for Discord servers.
                 The Bot is provided "as is" without warranties of any kind.
               </p>
             </section>
