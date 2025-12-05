@@ -107,7 +107,7 @@ export default function PrivacyPage() {
             className={`p-6 rounded-lg ${isDark ? "bg-gray-900/50 border-white/10" : "bg-gray-100/50 border-black/10"} border`}
           >
             <p className={`font-semibold ${isDark ? "text-white" : "text-black"}`}>
-              By using Eris, you agree to this Privacy Policy.
+              By using Maxy, you agree to this Privacy Policy.
             </p>
           </section>
         </motion.div>
